@@ -1,0 +1,26 @@
+{
+  "name": "clgretweet",
+  "version": "1.0.0",
+  "description": "Retweets CLG related tweets",
+  "main": "bot.js",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "lowdb": "^0.12.5",
+    "request": "^2.72.0",
+    "twitter-node-client": "^0.0.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxrchung/clgretweet.git"
+  },
+  "author": "maxrchung",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxrchung/clgretweet/issues"
+  },
+  "homepage": "https://github.com/maxrchung/clgretweet#readme"
+}
