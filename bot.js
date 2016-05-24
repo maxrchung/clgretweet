@@ -10,6 +10,7 @@ var sinceID = db.object.sinceID
 var trackSinceID = sinceID
 var callCount = 0
 var recentCount = 20
+var users = []
 
 var error = function(err, response, body) {
     console.log('ERROR [%s]', err)
@@ -29,14 +30,12 @@ setInterval(execute, 60 * 5 * 1000)
 function execute() {
     request(url, function handleRequest(error, response, html) {
 	if (!error) {
-	    var users = []
 	    var $ = cheerio.load(html)
 	    $('div#following li').each(function parseName(i, elem) {
 		users.push($(this).text().trim().substr(1))
 	    });
-
-	    processUsers(users)
 	}
+	processUsers(users)
     })
 }
 
